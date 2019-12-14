@@ -654,9 +654,7 @@ def keyPressed():
         elif key == RETURN or key == ENTER:
             updateLeaderboard()
             game.dead = True
-        elif key == SHIFT:
-            pass
-        else:
+        elif len(str(key)) == 1 and ord(str(key)) in range(97, 123):
             game.name += str(key)
         # player writes name
     else:
